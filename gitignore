@@ -1,0 +1,42 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.so
+*.egg-info/
+venv/
+.env
+
+# Jupyter Notebook Checkpoints
+.ipynb_checkpoints/
+
+# VSCode & IDEs
+.vscode/
+.idea/
+
+# OS Files
+.DS_Store
+Thumbs.db
+
+# Data Outputs
+data/
+*.csv
+*.xlsx
+*.json
+*.parquet
+
+# Plot Images
+outputs/*.png
+outputs/*.html
+
+# Environment Files
+*.log
+*.bak
+*.tmp
+
+# Test Artifacts
+tests/data/*.csv
+
+# Ignore large original datasets
+Basecamp_combined_cleansed.csv
