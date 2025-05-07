@@ -1,5 +1,5 @@
 # fda-510k-analysis
-Utilizing basic data analysis techniques to review a new dataset and gain insights
+Analyze trends and decision metrics from over 100K FDA 510(k) device approvals.
 
 This project analyzes U.S. FDA 510(k) medical device submissions using historical data to identify regulatory trends, decision timelines, and specialty-specific patterns. The goal is to provide insights into how different product categories and medical specialties influence review outcomes and durations.
 
@@ -16,24 +16,10 @@ Each record includes information such as:
 - Decision type (e.g., SESE, DENG)
 - Advisory committee (medical specialty)
 
-## 🔍 Key Analyses
-
-- **Trend Analysis**: Submission volume and average review time over the years.
-- **Decision Outcomes**: Distribution of FDA decision types across specialties.
-- **Product Categorization**: Most frequent product codes and their specialty mapping.
-- **Specialty Focus**: Deep dive into top 5 medical specialties:
-  - Cardiovascular
-  - General & Plastic Surgery
-  - General Hospital
-  - Orthopedic
-  - Radiology
-
-## 📈 Insights
-
-- **Submission Growth**: Cardiovascular and Radiology device submissions show steady growth, reflecting technological advancement.
-- **Regulatory Timing**: Devices in Cardiovascular tend to have longer review times.
-- **High Clearance Rate**: Most submissions fall under "Substantially Equivalent - SESE".
-- **Product Code Concentration**: A small number of product codes dominate within each specialty.
+## 🚀 Features
+- Time-to-decision analysis
+- Trends by product code, advisory committee, decision type
+- Clean visualizations for strategic insights
 
 ## 🛠️ Technologies
 
@@ -47,3 +33,29 @@ Each record includes information such as:
    ```bash
    git clone https://github.com/your-username/fda-device-analysis.git
    cd fda-device-analysis
+
+2. Install dependencies
+   python -m venv venv
+   source venv/bin/activate   # or venv\Scripts\activate on Windows
+   pip install -r requirements.txt
+
+3. jupyter notebook
+# Open notebooks/exploratory_analysis.ipynb
+
+
+##Average Decision Time by Product Code [sample]
+| PRODUCTCODE | count |   mean |    std | min | 25% |   50% |    75% |  max |
+| :---------- | ----: | -----: | -----: | --: | --: | ----: | -----: | ---: |
+| DXN         |  1168 | 136.21 | 111.00 |   3 |  56 |   107 | 195.25 |  860 |
+| DZE         |  1480 | 202.52 | 172.23 |   3 |  88 | 153.5 | 266.25 | 1440 |
+| ...         |       |        |        |     |     |       |        |      |
+
+🧪 Testing
+Run tests with:
+pytest tests/
+
+🔗 Data Source
+* U.S. FDA 510(k) Premarket Notification
+* Optionally enriched via OpenFDA API
+
+
